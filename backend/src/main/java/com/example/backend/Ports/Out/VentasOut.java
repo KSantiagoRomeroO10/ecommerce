@@ -7,8 +7,8 @@ import java.util.Optional;
 
 public interface VentasOut {
   Ventas guardarVenta(Ventas venta);
-  Optional<Ventas> buscarVentaPorId(Integer id);
+  Optional<Ventas> buscarVentaPorId(Long id);
   List<Ventas> listarVentas();
   Ventas actualizarVenta(Ventas venta);
-  void eliminarVenta(Integer id);
+  Long eliminarVenta(Long id);
 }

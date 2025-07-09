@@ -3,27 +3,27 @@ package com.example.backend.Models;
 import java.math.BigDecimal;
 
 public class Productos {
-  private Long idProduct;
+  private Long idProducto;
   private String nombreProducto;
   private BigDecimal precioPrducto;
   private String descripcionProducto;
   private Integer stockProducto;
   
-  public Productos(Long idProduct, String nombreProducto, BigDecimal precioPrducto, String descripcionProducto,
+  public Productos(Long idProducto, String nombreProducto, BigDecimal precioPrducto, String descripcionProducto,
       Integer stockProducto) {
-    this.idProduct = idProduct;
+    this.idProducto = idProducto;
     this.nombreProducto = nombreProducto;
     this.precioPrducto = precioPrducto;
     this.descripcionProducto = descripcionProducto;
     this.stockProducto = stockProducto;
   }
 
-  public Long getIdProduct() {
-    return idProduct;
+  public Long getIdProducto() {
+    return idProducto;
   }
 
-  public void setIdProduct(Long idProduct) {
-    this.idProduct = idProduct;
+  public void setIdProducto(Long idProducto) {
+    this.idProducto = idProducto;
   }
 
   public String getNombreProducto() {
@@ -57,5 +57,6 @@ public class Productos {
   public void setStockProducto(Integer stockProducto) {
     this.stockProducto = stockProducto;
   }
+
   
 }

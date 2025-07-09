@@ -1,15 +1,14 @@
 package com.example.backend.Service;
 
+import com.example.backend.Models.Productos;
+import com.example.backend.Ports.In.ProductosIn;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
-
-import com.example.backend.Models.Productos;
-import com.example.backend.Ports.In.VendedoresIn;
-
 @Service
-public class VendedoresSevice implements VendedoresIn {
+public class ProductosService implements ProductosIn {
 
   @Override
   public Productos crearProducto(Productos producto) {
@@ -40,5 +39,5 @@ public class VendedoresSevice implements VendedoresIn {
     // TODO Auto-generated method stub
     throw new UnsupportedOperationException("Unimplemented method 'eliminarProducto'");
   }
-  
+
 }

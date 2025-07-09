@@ -10,5 +10,5 @@ public interface ProductosOut {
   Optional<Productos> buscarProductoPorId(Long id);
   List<Productos> listarProductos();
   Productos actualizarProducto(Productos producto);
-  void eliminarProducto(Long id);
+  Long eliminarProducto(Long id);
 }
