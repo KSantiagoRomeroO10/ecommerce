@@ -48,17 +48,17 @@ CREATE TABLE venta_producto (
 		ON UPDATE CASCADE
 );
 
--- La base de datos está organizada de manera que cada vendedor puede realizar muchas ventas,
+-- La base de datos estï¿½ organizada de manera que cada vendedor puede realizar muchas ventas,
 -- pero cada venta pertenece solo a un vendedor. A su vez, una venta puede incluir varios
--- productos, y un mismo producto puede estar presente en muchas ventas. Esta relación entre
--- productos y ventas se gestiona a través de una tabla intermedia llamada venta_producto,
--- que permite registrar cuántos productos se vendieron y a qué precio. Así, se reflejan de
+-- productos, y un mismo producto puede estar presente en muchas ventas. Esta relaciï¿½n entre
+-- productos y ventas se gestiona a travï¿½s de una tabla intermedia llamada venta_producto,
+-- que permite registrar cuï¿½ntos productos se vendieron y a quï¿½ precio. Asï¿½, se reflejan de
 -- forma clara y ordenada las relaciones entre vendedores, productos y ventas.
 
 -- Insertar productos
 INSERT INTO productos (nombre_producto, precio_producto, descripcion_producto, stock_producto) VALUES
-('Camiseta Azul', 35000.00, 'Camiseta de algodón talla M', 100),
-('Pantalón Jeans', 85000.00, 'Jeans azul oscuro, corte slim', 60),
+('Camiseta Azul', 35000.00, 'Camiseta de algodï¿½n talla M', 100),
+('Pantalï¿½n Jeans', 85000.00, 'Jeans azul oscuro, corte slim', 60),
 ('Zapatos Deportivos', 120000.00, 'Zapatos para correr talla 42', 40),
 ('Chaqueta Impermeable', 95000.00, 'Chaqueta para lluvia talla L', 30),
 ('Gorra Negra', 15000.00, 'Gorra de tela negra ajustable', 80),
@@ -66,15 +66,15 @@ INSERT INTO productos (nombre_producto, precio_producto, descripcion_producto, s
 ('Mochila Urbana', 68000.00, 'Mochila para uso diario', 50),
 ('Bufanda de Lana', 22000.00, 'Bufanda tejida unisex', 90),
 ('Lentes de Sol', 45000.00, 'Lentes con filtro UV', 70),
-('Cinturón de Cuero', 38000.00, 'Cinturón marrón ajustable', 65);
+('Cinturï¿½n de Cuero', 38000.00, 'Cinturï¿½n marrï¿½n ajustable', 65);
 
 -- Insertar vendedores
 INSERT INTO vendedores (nombre_vendedor, correo_vendedor, comision_vendedor) VALUES
-('Laura Gómez', 'laura.gomez@ecommerce.com', 10),
+('Laura Gï¿½mez', 'laura.gomez@ecommerce.com', 10),
 ('Carlos Ruiz', 'carlos.ruiz@ecommerce.com', 12),
 ('Andrea Torres', 'andrea.torres@ecommerce.com', 15),
-('David López', 'david.lopez@ecommerce.com', 11),
-('Mariana Ríos', 'mariana.rios@ecommerce.com', 13);
+('David Lï¿½pez', 'david.lopez@ecommerce.com', 11),
+('Mariana Rï¿½os', 'mariana.rios@ecommerce.com', 13);
 
 -- Insertar ventas
 INSERT INTO ventas (id_vendedor) VALUES
