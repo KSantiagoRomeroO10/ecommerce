@@ -13,7 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
-@Entity
+@Entity // Anotación persistencia
 public class ProductosEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,14 +21,15 @@ public class ProductosEntity {
 
   private String nombreProducto;
 
-  @Column(precision = 8, scale = 2)
+  @Column(precision = 8, scale = 2) // Manejar precisión decimal exacta.
   private BigDecimal precioProducto;
 
-  @Column(columnDefinition = "TEXT")
   private String descripcionProducto;
-
   private Integer stockProducto;
 
+  // La relación se maneja desde el otro lado usando el atributo producto
+  // Se le dice a SpringBoot que agarre todos los productos que estan en VentaProducto
+  // y los liste. El atributo dueño en la otra entidad
   @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
   private List<VentaProducto> ventaProductos;
 
