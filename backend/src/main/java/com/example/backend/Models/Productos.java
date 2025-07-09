@@ -5,15 +5,15 @@ import java.math.BigDecimal;
 public class Productos {
   private Long idProducto;
   private String nombreProducto;
-  private BigDecimal precioPrducto;
+  private BigDecimal precioProducto;
   private String descripcionProducto;
   private Long stockProducto;
-  
-  public Productos(Long idProducto, String nombreProducto, BigDecimal precioPrducto, String descripcionProducto,
+
+  public Productos(Long idProducto, String nombreProducto, BigDecimal precioProducto, String descripcionProducto,
       Long stockProducto) {
     this.idProducto = idProducto;
     this.nombreProducto = nombreProducto;
-    this.precioPrducto = precioPrducto;
+    this.precioProducto = precioProducto;
     this.descripcionProducto = descripcionProducto;
     this.stockProducto = stockProducto;
   }
@@ -21,42 +21,32 @@ public class Productos {
   public Long getIdProducto() {
     return idProducto;
   }
-
   public void setIdProducto(Long idProducto) {
     this.idProducto = idProducto;
   }
-
   public String getNombreProducto() {
     return nombreProducto;
   }
-
   public void setNombreProducto(String nombreProducto) {
     this.nombreProducto = nombreProducto;
   }
-
-  public BigDecimal getPrecioPrducto() {
-    return precioPrducto;
+  public BigDecimal getPrecioProducto() {
+    return precioProducto;
   }
-
-  public void setPrecioPrducto(BigDecimal precioPrducto) {
-    this.precioPrducto = precioPrducto;
+  public void setPrecioProducto(BigDecimal precioProducto) {
+    this.precioProducto = precioProducto;
   }
-
   public String getDescripcionProducto() {
     return descripcionProducto;
   }
-
   public void setDescripcionProducto(String descripcionProducto) {
     this.descripcionProducto = descripcionProducto;
   }
-
   public Long getStockProducto() {
     return stockProducto;
   }
-
   public void setStockProducto(Long stockProducto) {
     this.stockProducto = stockProducto;
   }
-  
   
 }

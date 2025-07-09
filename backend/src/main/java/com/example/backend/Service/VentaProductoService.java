@@ -43,7 +43,7 @@ public class VentaProductoService implements VentaProductoIn {
   }
 
   @Override
-  public void eliminarVentaProducto(Long id) {
-    ventaProductoOut.eliminarVentaProducto(id);
+  public Long eliminarVentaProducto(Long id) {
+    return ventaProductoOut.eliminarVentaProducto(id);
   }
 }

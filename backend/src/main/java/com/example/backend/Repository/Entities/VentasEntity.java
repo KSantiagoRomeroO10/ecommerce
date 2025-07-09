@@ -14,7 +14,7 @@ import jakarta.persistence.ManyToOne;
 public class VentasEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer idVentaProducto;
+  private Long idVentaProducto;
 
   @ManyToOne
   @JoinColumn(name = "id_venta")
@@ -24,12 +24,12 @@ public class VentasEntity {
   @JoinColumn(name = "id_producto")
   private ProductosEntity producto;
 
-  private Integer cantidad;
+  private Long cantidad;
 
   @Column(precision = 8, scale = 2)
   private BigDecimal precioUnitario;
 
-  public VentasEntity(Integer idVentaProducto, VentasEntity venta, ProductosEntity producto, Integer cantidad,
+  public VentasEntity(Long idVentaProducto, VentasEntity venta, ProductosEntity producto, Long cantidad,
       BigDecimal precioUnitario) {
     this.idVentaProducto = idVentaProducto;
     this.venta = venta;
@@ -38,11 +38,11 @@ public class VentasEntity {
     this.precioUnitario = precioUnitario;
   }
 
-  public Integer getIdVentaProducto() {
+  public Long getIdVentaProducto() {
     return idVentaProducto;
   }
 
-  public void setIdVentaProducto(Integer idVentaProducto) {
+  public void setIdVentaProducto(Long idVentaProducto) {
     this.idVentaProducto = idVentaProducto;
   }
 
@@ -62,11 +62,11 @@ public class VentasEntity {
     this.producto = producto;
   }
 
-  public Integer getCantidad() {
+  public Long getCantidad() {
     return cantidad;
   }
 
-  public void setCantidad(Integer cantidad) {
+  public void setCantidad(Long cantidad) {
     this.cantidad = cantidad;
   }
 

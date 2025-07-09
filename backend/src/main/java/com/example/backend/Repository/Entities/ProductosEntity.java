@@ -17,7 +17,7 @@ import jakarta.persistence.OneToMany;
 public class ProductosEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer idProducto;
+  private Long idProducto;
 
   private String nombreProducto;
 
@@ -25,7 +25,7 @@ public class ProductosEntity {
   private BigDecimal precioProducto;
 
   private String descripcionProducto;
-  private Integer stockProducto;
+  private Long stockProducto;
 
   // La relación se maneja desde el otro lado usando el atributo producto
   // Se le dice a SpringBoot que agarre todos los productos que estan en VentaProducto
@@ -33,21 +33,21 @@ public class ProductosEntity {
   @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL)
   private List<VentaProducto> ventaProductos;
 
-  public ProductosEntity(Integer idProducto, String nombreProducto, BigDecimal precioProducto,
-      String descripcionProducto, Integer stockProducto, List<VentaProducto> ventaProductos) {
+    public ProductosEntity(Long idProducto, String nombreProducto, BigDecimal precioProducto,
+              String descripcionProducto, Long stockProducto, List<VentaProducto> ventaProductos) {
     this.idProducto = idProducto;
     this.nombreProducto = nombreProducto;
     this.precioProducto = precioProducto;
     this.descripcionProducto = descripcionProducto;
     this.stockProducto = stockProducto;
     this.ventaProductos = ventaProductos;
-  }
+}
 
-  public Integer getIdProducto() {
+  public Long getIdProducto() {
     return idProducto;
   }
 
-  public void setIdProducto(Integer idProducto) {
+  public void setIdProducto(Long idProducto) {
     this.idProducto = idProducto;
   }
 
@@ -75,11 +75,11 @@ public class ProductosEntity {
     this.descripcionProducto = descripcionProducto;
   }
 
-  public Integer getStockProducto() {
+  public Long getStockProducto() {
     return stockProducto;
   }
 
-  public void setStockProducto(Integer stockProducto) {
+  public void setStockProducto(Long stockProducto) {
     this.stockProducto = stockProducto;
   }
 
@@ -91,5 +91,4 @@ public class ProductosEntity {
     this.ventaProductos = ventaProductos;
   }
 
-  
 }

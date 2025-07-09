@@ -18,7 +18,7 @@ import jakarta.persistence.OneToMany;
 public class VentaProductoEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer idVenta;
+  private Long idVenta;
 
   @ManyToOne
   @JoinColumn(name = "id_vendedor")
@@ -29,7 +29,7 @@ public class VentaProductoEntity {
   @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL)
   private List<VentaProducto> ventaProductos;
 
-  public VentaProductoEntity(Integer idVenta, VendedoresEntity vendedor, LocalDateTime fechaVenta,
+  public VentaProductoEntity(Long idVenta, VendedoresEntity vendedor, LocalDateTime fechaVenta,
       List<VentaProducto> ventaProductos) {
     this.idVenta = idVenta;
     this.vendedor = vendedor;
@@ -37,11 +37,11 @@ public class VentaProductoEntity {
     this.ventaProductos = ventaProductos;
   }
 
-  public Integer getIdVenta() {
+  public Long getIdVenta() {
     return idVenta;
   }
 
-  public void setIdVenta(Integer idVenta) {
+  public void setIdVenta(Long idVenta) {
     this.idVenta = idVenta;
   }
 

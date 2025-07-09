@@ -10,5 +10,5 @@ public interface VentaProductoIn {
   Optional<VentaProducto> obtenerVentaProductoPorId(Long id);
   List<VentaProducto> listarVentaProductos();
   VentaProducto actualizarVentaProducto(Long id, VentaProducto ventaProducto);
-  void eliminarVentaProducto(Long id);
+  Long eliminarVentaProducto(Long id);
 }

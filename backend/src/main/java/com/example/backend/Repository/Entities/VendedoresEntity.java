@@ -13,16 +13,16 @@ import jakarta.persistence.OneToMany;
 public class VendedoresEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer idVendedor;
+  private Long idVendedor;
 
   private String nombreVendedor;
   private String correoVendedor;
-  private Integer comisionVendedor;
+  private Long comisionVendedor;
 
   @OneToMany(mappedBy = "vendedor", cascade = CascadeType.ALL)
   private List<VentasEntity> ventas;
 
-  public VendedoresEntity(Integer idVendedor, String nombreVendedor, String correoVendedor, Integer comisionVendedor,
+  public VendedoresEntity(Long idVendedor, String nombreVendedor, String correoVendedor, Long comisionVendedor,
       List<VentasEntity> ventas) {
     this.idVendedor = idVendedor;
     this.nombreVendedor = nombreVendedor;
@@ -31,11 +31,11 @@ public class VendedoresEntity {
     this.ventas = ventas;
   }
 
-  public Integer getIdVendedor() {
+  public Long getIdVendedor() {
     return idVendedor;
   }
 
-  public void setIdVendedor(Integer idVendedor) {
+  public void setIdVendedor(Long idVendedor) {
     this.idVendedor = idVendedor;
   }
 
@@ -55,11 +55,11 @@ public class VendedoresEntity {
     this.correoVendedor = correoVendedor;
   }
 
-  public Integer getComisionVendedor() {
+  public Long getComisionVendedor() {
     return comisionVendedor;
   }
 
-  public void setComisionVendedor(Integer comisionVendedor) {
+  public void setComisionVendedor(Long comisionVendedor) {
     this.comisionVendedor = comisionVendedor;
   }
 
