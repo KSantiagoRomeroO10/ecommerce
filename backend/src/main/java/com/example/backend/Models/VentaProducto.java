@@ -3,13 +3,13 @@ package com.example.backend.Models;
 import java.math.BigDecimal;
 
 public class VentaProducto {
-  private Integer idVentaProducto;
+  private Long idVentaProducto;
   private Ventas venta;
   private Productos producto;
-  private Integer cantidad;
+  private Long cantidad;
   private BigDecimal precioUnitario;
 
-  public VentaProducto(Integer idVentaProducto, Ventas venta, Productos producto, Integer cantidad,
+  public VentaProducto(Long idVentaProducto, Ventas venta, Productos producto, Long cantidad,
       BigDecimal precioUnitario) {
     this.idVentaProducto = idVentaProducto;
     this.venta = venta;
@@ -18,10 +18,10 @@ public class VentaProducto {
     this.precioUnitario = precioUnitario;
   }
   
-  public Integer getIdVentaProducto() {
+  public Long getIdVentaProducto() {
     return idVentaProducto;
   }
-  public void setIdVentaProducto(Integer idVentaProducto) {
+  public void setIdVentaProducto(Long idVentaProducto) {
     this.idVentaProducto = idVentaProducto;
   }
   public Ventas getVenta() {
@@ -36,10 +36,10 @@ public class VentaProducto {
   public void setProducto(Productos producto) {
     this.producto = producto;
   }
-  public Integer getCantidad() {
+  public Long getCantidad() {
     return cantidad;
   }
-  public void setCantidad(Integer cantidad) {
+  public void setCantidad(Long cantidad) {
     this.cantidad = cantidad;
   }
   public BigDecimal getPrecioUnitario() {
@@ -48,4 +48,6 @@ public class VentaProducto {
   public void setPrecioUnitario(BigDecimal precioUnitario) {
     this.precioUnitario = precioUnitario;
   }
+
+  
 }

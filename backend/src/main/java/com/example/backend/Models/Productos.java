@@ -7,10 +7,10 @@ public class Productos {
   private String nombreProducto;
   private BigDecimal precioPrducto;
   private String descripcionProducto;
-  private Integer stockProducto;
+  private Long stockProducto;
   
   public Productos(Long idProducto, String nombreProducto, BigDecimal precioPrducto, String descripcionProducto,
-      Integer stockProducto) {
+      Long stockProducto) {
     this.idProducto = idProducto;
     this.nombreProducto = nombreProducto;
     this.precioPrducto = precioPrducto;
@@ -50,13 +50,13 @@ public class Productos {
     this.descripcionProducto = descripcionProducto;
   }
 
-  public Integer getStockProducto() {
+  public Long getStockProducto() {
     return stockProducto;
   }
 
-  public void setStockProducto(Integer stockProducto) {
+  public void setStockProducto(Long stockProducto) {
     this.stockProducto = stockProducto;
   }
-
+  
   
 }

@@ -4,22 +4,22 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Ventas {
-  private Integer idVenta;
+  private Long idVenta;
   private Vendedores vendedor;
   private LocalDateTime fechaVenta = LocalDateTime.now();
   private List<VentaProducto> ventaProductos;
 
-  public Ventas(Integer idVenta, Vendedores vendedor, LocalDateTime fechaVenta, List<VentaProducto> ventaProductos) {
+  public Ventas(Long idVenta, Vendedores vendedor, LocalDateTime fechaVenta, List<VentaProducto> ventaProductos) {
     this.idVenta = idVenta;
     this.vendedor = vendedor;
     this.fechaVenta = fechaVenta;
     this.ventaProductos = ventaProductos;
   }
-  public Integer getIdVenta() {
+  public Long getIdVenta() {
     return idVenta;
   }
-  public void setIdVenta(Integer idVenta) {
-    this.idVenta = idVenta;
+  public void setIdVenta(Long id) {
+    this.idVenta = id;
   }
   public Vendedores getVendedor() {
     return vendedor;

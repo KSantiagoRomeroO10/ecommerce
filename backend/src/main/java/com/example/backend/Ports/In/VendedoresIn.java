@@ -3,12 +3,12 @@ package com.example.backend.Ports.In;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.backend.Models.Productos;
+import com.example.backend.Models.Vendedores;
 
 public interface VendedoresIn {
-  Productos crearProducto(Productos producto);
-  Optional<Productos> obtenerProductoPorId(Long id);
-  List<Productos> listarProductos();
-  Productos actualizarProducto(Long id, Productos producto);
-  Long eliminarProducto(Long id);
+  Vendedores crearVendedor(Vendedores vendedor);
+  Optional<Vendedores> obtenerVendedorPorId(Long id);
+  List<Vendedores> listarVendedores();
+  Vendedores actualizarVendedor(Long id, Vendedores vendedor);
+  Long eliminarVendedor(Long id);
 }

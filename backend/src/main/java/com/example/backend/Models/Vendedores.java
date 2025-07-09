@@ -3,12 +3,13 @@ package com.example.backend.Models;
 import java.util.List;
 
 public class Vendedores {
-  private Integer idVendedor;
+  private Long idVendedor;
   private String nombreVendedor;
   private String correoVendedor;
-  private Integer comisionVendedor;
+  private Long comisionVendedor;
   private List<Ventas> ventas;
-  public Vendedores(Integer idVendedor, String nombreVendedor, String correoVendedor, Integer comisionVendedor,
+  
+  public Vendedores(Long idVendedor, String nombreVendedor, String correoVendedor, Long comisionVendedor,
       List<Ventas> ventas) {
     this.idVendedor = idVendedor;
     this.nombreVendedor = nombreVendedor;
@@ -16,10 +17,10 @@ public class Vendedores {
     this.comisionVendedor = comisionVendedor;
     this.ventas = ventas;
   }
-  public Integer getIdVendedor() {
+  public Long getIdVendedor() {
     return idVendedor;
   }
-  public void setIdVendedor(Integer idVendedor) {
+  public void setIdVendedor(Long idVendedor) {
     this.idVendedor = idVendedor;
   }
   public String getNombreVendedor() {
@@ -34,10 +35,10 @@ public class Vendedores {
   public void setCorreoVendedor(String correoVendedor) {
     this.correoVendedor = correoVendedor;
   }
-  public Integer getComisionVendedor() {
+  public Long getComisionVendedor() {
     return comisionVendedor;
   }
-  public void setComisionVendedor(Integer comisionVendedor) {
+  public void setComisionVendedor(Long comisionVendedor) {
     this.comisionVendedor = comisionVendedor;
   }
   public List<Ventas> getVentas() {
